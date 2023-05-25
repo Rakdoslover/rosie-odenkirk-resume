@@ -221,32 +221,6 @@
         </div>
 
     </footer>
-    <script>
-        function initMap() {
-            const map = new google.maps.Map(document.getElementById("map"), {
-                zoom: 3,
-                center: { lat: -28.024, lng: 140.887 },
-            });
-            const infoWindow = new google.maps.InfoWindow({
-                content: "",
-                disableAutoPan: true,
-            });
-
-            const labels = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-
-            const markers = locations.map((position, i) => {
-                const label = labels[i % labels.length];
-                const marker = new google.maps.Marker({
-                    position,
-                    label,
-                });
-            });
-
-            new MarkerClusterer({ markers, map });
-        }
-
-
-    </script>
     <script
         src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
     <script async defer
